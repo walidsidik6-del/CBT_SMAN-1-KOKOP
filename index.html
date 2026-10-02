@@ -63,7 +63,7 @@ const E=[
 ["Seorang administrator mendapatkan jaringan 192.168.100.0/24 dan harus membaginya untuk: Laboratorium 100 host, Ruang Guru 40 host, Tata Usaha 20 host, Perpustakaan 10 host. Analisis pembagian subnet yang sesuai. Tentukan prefix yang digunakan untuk setiap bagian dan tuliskan network address serta rentang hostnya.","Gunakan VLSM, urutkan dari terbesar. Lab 100 host &rarr; /25 (126): 192.168.100.0/25, host .1-.126, broadcast .127. Guru 40 &rarr; /26 (62): 192.168.100.128/26, host .129-.190, broadcast .191. TU 20 &rarr; /27 (30): 192.168.100.192/27, host .193-.222, broadcast .223. Perpustakaan 10 &rarr; /28 (14): 192.168.100.224/28, host .225-.238, broadcast .239. Sisa .240-.255 belum terpakai.<br><b>Rubrik:</b> metode VLSM (1), prefix keempat bagian (2), network address (2.5), rentang host (2.5)."]
 ];
 // ISI dengan URL Web App Google Apps Script (lihat apps-script-rekap.gs). Contoh: "https://script.google.com/macros/s/XXXX/exec"
-const ENDPOINT="https://script.google.com/macros/s/AKfycbzL2_1W2s0rahz8rqHWcyvgdjdLVDi8Gw5VpJKwvP-p1jL0aKEMB8IYRlJy2gQs2oR78w/exec";
+const ENDPOINT="https://script.google.com/macros/s/AKfycbzw_5oi3nAKNdb7X_WgO4-6e2rvJCOMfFWDMiCTxUGJJfZrxcoQNICh8QB9p2KyKhjwVg/exec";
 const KEY="cbt_inf11_jarkom_v2",DUR=90*60,L="ABCDE",MAXE=8;
 let S=load(),tick=null,DB=null,UID=null,TEACH=false,NET="cek",VIEW="",H={},N={},ESS=null,unsub=null,OPEN={},RW=[],watching=false,busy=false;
 function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return{}}}
